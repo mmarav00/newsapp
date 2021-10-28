@@ -1,4 +1,12 @@
-nav {
-  background-color: black;
+.nav {
+  height: 71px;
+  -webkit-box-shadow: 0px 1px 8px #8888;
+          box-shadow: 0px 1px 8px #8888;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=navbar.css.map */
