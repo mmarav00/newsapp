@@ -14,8 +14,8 @@ export const NewsCard = ({newsItem}) => {
             
                 <div>
                 
-                    <span className='author'>
-                        <a href= {newsItem.url}></a>
+                    <span className='author'> 
+                        <a href= {newsItem.url}></a> 
                         <br></br>
                          by {newsItem.author ? newsItem.author : "unknown"}
                     </span>
@@ -29,6 +29,9 @@ export const NewsCard = ({newsItem}) => {
                             <a href={newsItem.url} target="__blank">
                                 <b>{newsItem.source.name}</b>
                             </a>
+                            <br></br>
+                            <button className="favourites" onPress={() =>
+                            this.addToFavourites(newsItem.data.title)}>Favourite</button>
                         </span>
                     </div>
                 </div>

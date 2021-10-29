@@ -1,12 +1,25 @@
 .nav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
   height: 71px;
   -webkit-box-shadow: 0px 1px 8px #8888;
           box-shadow: 0px 1px 8px #8888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 /*# sourceMappingURL=navbar.css.map */

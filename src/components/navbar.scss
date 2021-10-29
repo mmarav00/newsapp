@@ -1,10 +1,13 @@
 .nav{
+    position: sticky;
+    top: 0px;
     height: 71px;
     box-shadow: 0px 1px 8px #8888;
     display: flex;
-    align-items: center;
+    align-items: flex-start ;
     }
 
-    .icon{
-    
+    .searchbar{
+        display: flex;
+        flex-direction: column;
     }

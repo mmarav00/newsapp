@@ -4,10 +4,9 @@ import './navbar.scss';
 
 const Navbar = ({setCategory}) => {
     return (
-    <div className ="nav">
-        <div className ="icon">
+    <div className ="nav"> 
             <Drawer setCategory={setCategory}/>
-            </div>
+           
     </div>
     )
 }

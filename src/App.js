@@ -5,19 +5,21 @@ import Navbar from './components/navbar';
 import './components/navbar.scss'
 import axios from "axios";
 import apikey from './data/config';
+import  SearchPage  from './components/SearchBar/SearchPage.js';
+
 
 
 function App() {
-
   const [category, setCategory] = useState("general");
   const [newsArray, setNewsArray] = useState([]);
   const [newsResults, setNewsResults]= useState();
+  const [loadMore, setLoadMore] = useState(20);
 
   const newsApi = async () => {
     try {
 
       const news = await axios.get (
-        `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apikey}`
+        `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${apikey}&pageSize=${loadMore}`
         );
         setNewsArray(news.data.articles);
         setNewsResults(news.data.totalResults);
@@ -30,18 +32,20 @@ function App() {
   console.log(newsArray);
 
   useEffect(() => {
-    newsApi();
-  }, [newsResults, category]);
+    newsApi(); // eslint-disable-next-line
+  }, [newsResults, category, loadMore]);
 
   return (
     <div className="App">
     <Navbar setCategory= {setCategory}/>
-
-    <Content newsArray={newsArray} newsResults={newsResults}/>
+    <SearchPage newsArray={newsArray}/>
+    <Content
+    loadMore={loadMore}
+    setLoadMore={setLoadMore}
+    newsArray={newsArray}
+    newsResults={newsResults}/>
     
-     
-    </div>
-    
+    </div> 
   );
 }
 

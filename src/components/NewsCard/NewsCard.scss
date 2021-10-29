@@ -60,6 +60,16 @@ padding: 10px 0;
     color: #44444d;
 }
 
+.favourites{
+    background-color: #e7e7e7;
+    border: black;
+    color:black;
+    padding: 15px 32px;
+    text-align: right;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+}
 @media (max-width: 800px) {
     .newsCard {
         flex-direction: column;

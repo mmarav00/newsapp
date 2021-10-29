@@ -1,7 +1,6 @@
 const categories = [
-    "buisness",
-    "entertainment",
     "general",
+    "entertainment",
     "health",
     "science",
     "sports",
